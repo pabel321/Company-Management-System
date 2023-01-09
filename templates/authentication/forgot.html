@@ -1,0 +1,42 @@
+{% extends 'layouts.html' %}
+
+{% block title %}
+Login Page
+{% endblock %}
+
+{% block content %}
+
+
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class='text-center'>Forgot my password</h2>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Contact Section ======= -->
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6">
+          <form action="" method="post" role="form">
+            {% csrf_token %}
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Email Address">
+            </div>
+            <div class="text-center"><button type="submit" class="btn btn-success btn-block">Forgot Password</button></div>
+          </form>
+          <small>Login to my account<a href='{% url "login" %}'>click here!</a></small>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+  {% endblock %}
